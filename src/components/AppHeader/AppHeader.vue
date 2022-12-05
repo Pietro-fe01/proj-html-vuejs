@@ -1,9 +1,12 @@
 <script>
 import HeaderCountdown from './HeaderCountdown.vue';
+import HeaderBody from './HeaderBody.vue';
+
 export default {
     name: 'AppHeader',
     components: {
         HeaderCountdown,
+        HeaderBody
     }
 }
 </script>
@@ -11,7 +14,7 @@ export default {
 <template>
     <header>
         <HeaderCountdown/>
-        HEADER DELLA PAGINA
+        <HeaderBody/>
     </header>
 </template>
 
