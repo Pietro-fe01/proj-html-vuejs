@@ -10,8 +10,8 @@ export default {
 
 <template>
     <header>
-        HEADER DELLA PAGINA
         <HeaderCountdown/>
+        HEADER DELLA PAGINA
     </header>
 </template>
 
