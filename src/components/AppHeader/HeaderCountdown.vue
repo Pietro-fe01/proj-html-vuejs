@@ -36,6 +36,9 @@ export default {
                 margin-right: .5rem;
                 transform: translate(0px, 1px);
             }
+            & h5{
+                font-weight: bold;
+            }
         }
         & .ticket-button{
             margin: .625rem 0;
