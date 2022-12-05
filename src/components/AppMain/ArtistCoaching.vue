@@ -51,10 +51,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    .title{
-        text-align: center;
-    }
-    .cards{
-        display: flex;
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+        .title{
+            text-align: center;
+        }
+        .cards{
+            display: flex;
+            justify-content: space-between;
+        }
     }
 </style>

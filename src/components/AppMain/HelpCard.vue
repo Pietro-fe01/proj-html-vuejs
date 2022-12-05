@@ -8,28 +8,28 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="ms-card">
         <img :src="`/src/assets/artistCoaching/${info.helpImage}`" alt="">
-        <h5 class="mt-3">{{info.helpType}}</h5>
+        <h4 class="mt-3">{{info.helpType}}</h4>
         <p>{{info.description}}</p>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    .card{
-        background-color: red;
-        width: calc(100% / 4);
+    .ms-card{
+        width: calc(100% / 4 - 20px);
         & img{
-            width: 100px;
-            &:nth-child(1){
-                background-color: black;
-            }
+            max-width: 40%;
         }
-        & h5{
+        & h4{
             font-weight: bolder;
         }
         &:nth-child(2n){
             align-self: flex-end;
+            padding-top: 70px;
+        }
+        &:not(:nth-child(2n)) img{
+            height: 100px;
         }
     }
 </style>
