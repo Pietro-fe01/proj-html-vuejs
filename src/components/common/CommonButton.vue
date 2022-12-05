@@ -22,7 +22,8 @@ export default {
         font-size: .8125rem;
 
         &:hover{
-            background-color: #6ac5f1;
+            background-color: #6ac5f1 !important;
+            color: white !important;
         }
     }
 </style>
