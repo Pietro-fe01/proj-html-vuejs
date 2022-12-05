@@ -12,6 +12,7 @@ export default {
 <template>
     <section class="hero">
         <div class="hero__details">
+            <h2 class="subtitle">Hello, Im Matin</h2>
             <h2>Artist Coaching And Mentoring Might Be for You.</h2>
             <CommonButton class="get-started-button mt-4" textButton="Get started today"/>
         </div>
@@ -24,9 +25,6 @@ export default {
             <img class="artist-face" src="/src/assets/artist-hero-image-03-204x300.png" alt="">
             <img class="artist-multi-color" src="/src/assets/artist-hero-image-02-232x300.jpg" alt="">
             <img class="artist-monkey" src="/src/assets/artist-hero-image-01.jpg" alt="">
-            
-            <!-- Details middle -->
-            <img class="write" src="/src/assets/matin.png" alt="Hello, I am Matin img">
             
             <!-- Details right -->
             <img class="artist-shape-right-1" src="/src/assets/artist-shape-01-600x577.png" alt="detail">
@@ -70,10 +68,6 @@ export default {
                 max-width: 170px;
                 top: 295px;
                 left: 120px;
-            }
-            &.write{
-                top: 145px;
-                left: 650px;
             }
             &.artist-shape-right-1{
                 width: 650px;
