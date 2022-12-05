@@ -1,12 +1,15 @@
 <script>
+import AppHeader from './components/AppHeader/AppHeader.vue';
+
 export default {
   components: {
+    AppHeader,
   }
 }
 </script>
 
 <template>
-  <div>Inizio!</div>
+  <AppHeader/>
 </template>
 
 <style lang="scss">
