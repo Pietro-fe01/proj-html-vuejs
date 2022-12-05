@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
     .hero{
         background-color: #fbf9f6;
-        padding: 12.5rem 0;
+        padding: 195px 0;
         position: relative;
         & .image-details > img{
             position: absolute;
