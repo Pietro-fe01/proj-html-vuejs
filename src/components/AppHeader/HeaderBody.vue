@@ -52,9 +52,15 @@ export default {
             <a href="#">
                 <i class="fa-brands fa-twitter"></i>
             </a>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
         </div>
     </div>
 </template>
@@ -65,25 +71,28 @@ export default {
         justify-content: space-between;
         align-items: center;
         & .header-body__logo img{
-            width: 160px;
+            width: 10rem;
         } 
         & .header-body__nav ul{
             list-style: none;
             display: flex;
             & li{
-                margin: 0 15px;
-                padding: 30px 0;
+                margin: 0 .9375rem;
+                padding: 1.875rem 0;
                 & a{
                     text-decoration: none;
                     color: #333333;
+                    display: flex;
+                    align-items: center;
                     & .fa-chevron-down{
-                        font-size: 9px;
+                        font-size: .5625rem;
+                        margin-left: 5px;
                     }
                 }
             }
         }
         & .header-body__social i{
-            margin-left: 15px;
+            margin-left: .9375rem;
             color: #696969;
         }
     }

@@ -31,10 +31,10 @@ export default {
         & .timer{
             display: flex;
             align-items: center;
-            margin: 0 30px;
+            margin: 0 1.875rem;
             & .clock-icon{
                 margin-right: .5rem;
-                transform: translate(0px, 1px);
+                transform: translate(0px, .0625rem);
             }
             & h5{
                 font-weight: bold;
