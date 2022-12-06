@@ -1,12 +1,14 @@
 <script>
 import HeroSection from './HeroSection.vue';
 import ArtistCoaching from './ArtistCoaching.vue';
+import TestimonialSection from './TestimonialSection.vue';
 
 export default {
     name: 'AppMain',
     components: {
         HeroSection,
-        ArtistCoaching
+        ArtistCoaching,
+        TestimonialSection
     }
 }
 </script>
@@ -15,6 +17,7 @@ export default {
     <main>
         <HeroSection/>
         <ArtistCoaching/>
+        <TestimonialSection/>
     </main>
 </template>
 

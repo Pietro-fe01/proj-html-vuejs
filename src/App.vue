@@ -18,6 +18,6 @@ export default {
 <style lang="scss">
   @import './style/global.scss';
   body{
-    font-family: 'Klee One', cursive;
+    // font-family: 'Klee One', cursive;
   }
 </style>
