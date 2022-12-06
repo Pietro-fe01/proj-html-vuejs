@@ -26,7 +26,7 @@ export default {
                     testimonialRole: '/ It Specialist'
                 },
                 {
-                    testimonialTitle: 'Titolo Quarta Card',
+                    testimonialTitle: 'Hight level and quality',
                     testimonialDescription: 'descrizione quarta card',
                     testimonialImage: 'artist-testimonial-avatar-03.jpg',
                     testimonialName: 'Nome quarta card',
@@ -39,6 +39,20 @@ export default {
     methods: {
         changeIndex(data){
             return this.currentIndex = data
+        },
+        prevContent(){
+            if(this.currentIndex === 0){
+                return this.testimonialList.length - 1
+            } else {
+                return this.currentIndex - 1;
+            }
+        },
+        nextContent(){
+            if(this.currentIndex < this.testimonialList.length - 1){
+                return this.currentIndex + 1;
+            } else {
+                return 0
+            }
         }
     }
 }
@@ -51,21 +65,59 @@ export default {
             <h2 class="mb-5">Why do people love me?</h2>
         </div>
         <div class="ms-carousel">
-            <div class="carousel-card" :class="{active : index === this.currentIndex}" v-for="(testimonial, index) in testimonialList">
+            <!-- Card Sinistra -->
+            <div class="carousel-card">
                 <div class="carousel-card__description">
-                    <h4 class="mb-4">{{testimonial.testimonialTitle}}</h4>
-                    <p class="mb-4">{{testimonial.testimonialDescription}}</p>
+                    <h4 class="mb-4">{{this.testimonialList[this.prevContent()].testimonialTitle}}</h4>
+                    <p class="mb-4">{{this.testimonialList[this.prevContent()].testimonialDescription}}</p>
                 </div>
                 <div class="carousel-card__profile">
                     <div class="profile__img">
-                        <img :src="`/src/assets/testimonialSection/${testimonial.testimonialImage}`" alt="">
+                        <img :src="`/src/assets/testimonialSection/${this.testimonialList[this.prevContent()].testimonialImage}`" alt="">
                     </div>
                     <div class="profile__info">
-                        <h6 class="name ms-4">{{testimonial.testimonialName}}</h6>
-                        <small class="role ms-4">{{testimonial.testimonialRole}}</small>
+                        <h6 class="name ms-4">{{this.testimonialList[this.prevContent()].testimonialName}}</h6>
+                        <small class="role ms-4">{{this.testimonialList[this.prevContent()].testimonialRole}}</small>
                     </div>
                 </div>
             </div>
+            <!-- /Card Sinistra -->
+
+            <!-- Card centro -->
+            <div class="carousel-card active">
+                <div class="carousel-card__description">
+                    <h4 class="mb-4">{{this.testimonialList[this.currentIndex].testimonialTitle}}</h4>
+                    <p class="mb-4">{{this.testimonialList[this.currentIndex].testimonialDescription}}</p>
+                </div>
+                <div class="carousel-card__profile">
+                    <div class="profile__img">
+                        <img :src="`/src/assets/testimonialSection/${this.testimonialList[this.currentIndex].testimonialImage}`" alt="">
+                    </div>
+                    <div class="profile__info">
+                        <h6 class="name ms-4">{{this.testimonialList[this.currentIndex].testimonialName}}</h6>
+                        <small class="role ms-4">{{this.testimonialList[this.currentIndex].testimonialRole}}</small>
+                    </div>
+                </div>
+            </div>
+            <!-- /Card centro -->
+
+            <!-- Card destra -->
+            <div class="carousel-card">
+                <div class="carousel-card__description">
+                    <h4 class="mb-4">{{this.testimonialList[this.nextContent()].testimonialTitle}}</h4>
+                    <p class="mb-4">{{this.testimonialList[this.nextContent()].testimonialDescription}}</p>
+                </div>
+                <div class="carousel-card__profile">
+                    <div class="profile__img">
+                        <img :src="`/src/assets/testimonialSection/${this.testimonialList[this.nextContent()].testimonialImage}`" alt="">
+                    </div>
+                    <div class="profile__info">
+                        <h6 class="name ms-4">{{this.testimonialList[this.nextContent()].testimonialName}}</h6>
+                        <small class="role ms-4">{{this.testimonialList[this.nextContent()].testimonialRole}}</small>
+                    </div>
+                </div>
+            </div>
+            <!-- /Card destra -->
         </div>
         <ol class="carousel-moving p-0">
             <li :class="{active : this.currentIndex === 1}" @click="changeIndex(1)"></li>
@@ -89,14 +141,11 @@ export default {
                 background-color: white;
                 font-size: 14px;
                 opacity: 0.3;
-                &:last-child{
-                    display: none;
-                }
                 &.active{
                     opacity: 1;
                 }
                 & .carousel-card__description h4{
-                    font-size: 1rem;
+                    font-size: 20px;
                     font-weight: bold;
                 }
                 & .carousel-card__profile{
@@ -123,6 +172,7 @@ export default {
                 border-radius: 50%;
                 background-color: #d8d8d8;
                 margin: 30px 10px;
+                cursor: pointer;
                 &.active{
                     background-color: black;
                     transform: scale(1.5);
