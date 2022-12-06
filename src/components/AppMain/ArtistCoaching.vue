@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-    <section class="artist-coaching pt-5">
+    <section class="artist-coaching py-5">
         <div class="container">
             <!-- Titolo -->
             <div class="title pb-5">
@@ -71,9 +71,12 @@ export default {
                 <img class="detail-1" src="src\assets\artist-shape-01-600x577.png" alt="">
                 <img class="line" src="/src/assets/artistCoaching/maxcoach-shape-14.png" alt="">
                 <img class="waves" src="/src/assets/artistCoaching/maxcoach-shape-13-150x150.png" alt="">
+                <img class="big-wave" src="/src/assets/artistCoaching/artist-shape-01-300x288.png" alt="">
+                <img class="big-wave-2" src="/src/assets/artistCoaching/artist-shape-01-300x288.png" alt="">
+                <img class="big-wave-3" src="/src/assets/artistCoaching/artist-shape-01-300x288.png" alt="">
             </div>
 
-            <div class="youtube-video text-center pt-4 pb-5">
+            <div class="youtube-video text-center pt-4 pb-4">
                 <img class="cover" src="/src/assets/artistCoaching/artist-video-poster.jpg" alt="">
 
                 <div class="image-details">
@@ -148,6 +151,30 @@ export default {
             & .waves{
                 top: 190px;
                 right: -35px;
+            }
+            & .big-wave{
+                width: 30%;
+                bottom: -230px;
+                left: -50px;
+                transform: rotate(40deg);
+                &-2{
+                    width: 30%;
+                    bottom: -230px;
+                    left: 396px;
+                    transform: rotate(40deg);
+                }
+                &-3{
+                    // width: 45%;
+                    // bottom: -280px;
+                    // left: 840px;
+                    // rotate: 40deg;
+                    // transform: scaleX(-1);
+                    right: -18px;
+                    bottom: -125px;
+                    width: 700px;
+                    height: 300px;
+                    rotate: 180deg;
+                }
             }
             & .youtube-video{
                 position: relative;

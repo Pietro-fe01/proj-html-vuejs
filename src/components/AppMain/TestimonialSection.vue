@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-    <section class="testimonials py-5">
+    <section class="testimonials pt-5">
         <div class="testimonials__title text-center">
             <h2 class="subtitle">Testimonials</h2>
             <h2 class="mb-5">Why do people love me?</h2>
@@ -119,7 +119,7 @@ export default {
             </div>
             <!-- /Card destra -->
         </div>
-        <ol class="carousel-moving p-0">
+        <ol class="carousel-moving p-0 m-0">
             <li :class="{active : this.currentIndex === 1}" @click="changeIndex(1)"></li>
             <li :class="{active : this.currentIndex === 2}" @click="changeIndex(2)"></li>
             <li :class="{active : this.currentIndex === 3}" @click="changeIndex(3)"></li>
