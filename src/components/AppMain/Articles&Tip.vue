@@ -31,7 +31,9 @@ export default {
 
                 <!-- Middle -->
                 <div class="middle-card">
-                    <div class="bg"></div>
+                    <div class="bg">
+                        <img src="/src/assets/articlesTip/artist-blog-02-500x680.jpg" alt="">
+                    </div>
                     <div class="card-details">
                         <small class="card-role">ARTIST</small>
                         <h3 class="my-3">Connection Between Self- Portraits and Identity</h3>
@@ -57,7 +59,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="out-link pt-3">
+            <div class="out-link pt-5">
                 <span>Get into details now? </span>
                 <a href="#">View all posts &#8594</a>
             </div>
@@ -70,9 +72,6 @@ export default {
         background-color: #f5f7fa;
         overflow: hidden;
         position: relative;
-        & > img{
-            z-index: 10;
-        }
         &::before{
             content: "";
             display: block;
@@ -83,7 +82,7 @@ export default {
             left: -200px;
             background-image: url("/src/assets/articlesTip/maxcoach-shape-14.png");
             background-repeat: no-repeat;
-            z-index: 1 !important;
+            filter: contrast(0.5);
         }
         & .articles-tip__container{
             display: flex;
@@ -94,6 +93,18 @@ export default {
                 &.left{
                     position: relative;
                     top: 170px;
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        width: 65px;
+                        height: 65px;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        border: 9px solid #ecc5ab;
+                        position: absolute;
+                        top: -140px;
+                        left: 10px;
+                    }
                 }
                 &.right{
                     position: relative;
@@ -122,15 +133,20 @@ export default {
             & .middle-card{
                 width: 500px;
                 height: 640px;
-                background-color: red;
-                background-image: url('/src/assets/articlesTip/artist-blog-02-500x680.jpg');
                 position: relative;
                 display: flex;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url('/src/assets/articlesTip/maxcoach-shape-05.png');
+                    position: absolute;
+                    top: -35px;
+                    left: -35px;
+                }
                 & .bg{
                     position: absolute;
-                    background-color: rgba($color: #000000, $alpha: 0.2);
-                    width: 100%;
-                    height: 100%;
                 }
                 & .card-details{
                     align-self: flex-end;
@@ -152,7 +168,7 @@ export default {
                 color: #ef6f31;
                 text-decoration: none;
                 position: relative;
-                padding-bottom: 3px;
+                padding-bottom: 1px;
                 &::after{
                     content: "";
                     display: inline-block;
@@ -162,6 +178,9 @@ export default {
                     width: 100%;
                     height: 1.5px;
                     background-color: #e0e0e0;
+                }
+                &:hover::after{
+                    background-color: #ef6f31;
                 }
             }
         }
