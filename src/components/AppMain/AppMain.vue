@@ -3,6 +3,7 @@ import HeroSection from './HeroSection.vue';
 import ArtistCoaching from './ArtistCoaching.vue';
 import TestimonialSection from './TestimonialSection.vue';
 import LatestCourses from './LatestCourses.vue';
+import ArticlesTip from './Articles&Tip.vue';
 
 export default {
     name: 'AppMain',
@@ -10,7 +11,8 @@ export default {
         HeroSection,
         ArtistCoaching,
         TestimonialSection,
-        LatestCourses
+        LatestCourses,
+        ArticlesTip
     }
 }
 </script>
@@ -21,6 +23,7 @@ export default {
         <ArtistCoaching/>
         <TestimonialSection/>
         <LatestCourses/>
+        <ArticlesTip/>
     </main>
 </template>
 
