@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-    <section class="testimonials pt-5">
+    <section class="testimonials pt-5 pb-4">
         <div class="testimonials__title text-center">
             <h2 class="subtitle">Testimonials</h2>
             <h2 class="mb-5">Why do people love me?</h2>

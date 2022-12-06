@@ -42,7 +42,7 @@ export default {
         <div class="container">
             <!-- Titolo -->
             <div class="title pb-5">
-                <h2 class="subtitle">Artist coaching</h2>
+                <h2 class="subtitle">Artist Coaching</h2>
                 <h2>I understand what it takes to create. <br/> I can help you with</h2>
             </div>
 
