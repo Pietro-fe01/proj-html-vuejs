@@ -94,6 +94,13 @@
                 width: calc(100% / 2);
                 display: flex;
                 align-items: center;
+                z-index: 10;
+                &:hover img{
+                    filter: drop-shadow(0 0 5px orange);
+                }
+                &:hover .event-card__info{
+                    margin-left: 40px;
+                }
                 &:nth-child(2)::before{
                     content: "";
                     display: inline-block;
@@ -120,6 +127,9 @@
                 }
                 &:nth-child(3), &:nth-child(4){
                     text-align: right;
+                    &:hover .event-card__info{
+                        left: -160px;
+                    }
                     .event-card__img img{
                         position: relative;
                         right: -380px;
@@ -128,11 +138,14 @@
                     .event-card__info{
                         position: relative;
                         top: 0;
-                        left: -160px;
+                        left: 90px;
+                        margin-left: 40px;
                     }
                 }
                 & .event-card__info{
-                    margin-left: 40px;
+                    margin-left: -230px;
+                    transition: all 0.5s;
+                    z-index: -1;
                     & .date{
                         color: #8c8c8c;
                     }

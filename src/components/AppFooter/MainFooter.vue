@@ -96,7 +96,7 @@
         <div class="instagram">
             <div class="instagram__title">
                 <h5 class="me-2">Instagram</h5>
-                <span>@maxcoach</span>
+                <a href="#">@maxcoach</a>
             </div>
             <div class="instagram__images mt-3">
                 <img src="/src/assets/mainFooter/120084500_197897808368764_8114555493043279565_n.jpg" alt="">
@@ -136,6 +136,11 @@
             margin-right: 30px;
             & i{
                 font-size: 25px;
+                transition: transform 0.5s;
+                &:hover{
+                    transform: scale(1.3);
+                    filter: drop-shadow(0 0 5px #ef6f31);
+                }
             }
         }
         & .menu-links{
@@ -145,6 +150,9 @@
                 & li a{
                     color: #696969;
                     text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -153,14 +161,22 @@
                 & h5{
                     display: inline-block;
                 }
-                & span{
+                & a{
                     color: #ef6f37;
+                    text-decoration: none;
                 }
             }
-            &__images img{
-                width: 120px;
-                height: 120px;
-                margin-right: 20px;
+            &__images{
+                & img{
+                    width: 130px;
+                    height: 130px;
+                    margin-right: 25px;
+                    transition: all 0.5s;
+                    &:hover{
+                        rotate: 360deg;
+                        transform: scale(1.3);
+                    }
+                }
             }
         }
     }

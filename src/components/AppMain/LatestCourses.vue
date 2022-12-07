@@ -73,7 +73,7 @@
 
 <template>
     <section class="latest-courses py-5 container">
-        <div class="latest-courses__title text-center pb-4">
+        <div class="latest-courses__title text-center pb-5">
             <h2 class="subtitle">Artist Coaching</h2>
             <h2>Latest Online Courses</h2>
         </div>
