@@ -38,7 +38,7 @@ export default {
     <div class="container header-body">
         <div class="header-body__logo">
             <a href="#">
-                <img src="/src/assets/dark-logo.png" alt="">
+                <img src="/src/assets/appHeader/dark-logo.png" alt="">
             </a>
         </div>
         <nav class="header-body__nav">
@@ -107,7 +107,7 @@ export default {
             transition: transform 0.5s;
             &:hover{
                 transform: scale(1.5);
-                filter: drop-shadow(0 0 8px #ef6f31);
+                filter: drop-shadow(0 0 5px #ef6f31);
             }
         }
     }

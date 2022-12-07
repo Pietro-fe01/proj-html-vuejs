@@ -1,4 +1,4 @@
-<script>
+heroSection/<script>
 import CommonButton from '../common/CommonButton.vue';
 
 export default {
@@ -20,20 +20,20 @@ export default {
 
         <div class="image-details">
             <!-- Details left -->
-            <img class="flowers" src="/src/assets/artist-course-06-480x480.jpg" alt="">
-            <img class="artist-shape-left-2" src="/src/assets/artist-shape-02-600x324.png" alt="detail">
-            <img class="artist-shsape-left-3" src="/src/assets/artist-shape-03.png" alt="">
-            <img class="artist-face" src="/src/assets/artist-hero-image-03-204x300.png" alt="">
-            <img class="artist-multi-color" src="/src/assets/artist-hero-image-02-232x300.jpg" alt="">
-            <img class="artist-monkey" src="/src/assets/artist-hero-image-01.jpg" alt="">
+            <img class="flowers" src="/src/assets/heroSection/artist-course-06-480x480.jpg" alt="">
+            <img class="artist-shape-left-2" src="/src/assets/heroSection/artist-shape-02-600x324.png" alt="detail">
+            <img class="artist-shsape-left-3" src="/src/assets/heroSection/artist-shape-03.png" alt="">
+            <img class="artist-face" src="/src/assets/heroSection/artist-hero-image-03-204x300.png" alt="">
+            <img class="artist-multi-color" src="/src/assets/heroSection/artist-hero-image-02-232x300.jpg" alt="">
+            <img class="artist-monkey" src="/src/assets/heroSection/artist-hero-image-01.jpg" alt="">
             
             <!-- Details right -->
-            <img class="artist-shape-right-1" src="/src/assets/artist-shape-01-600x577.png" alt="detail">
-            <img class="leaf" src="/src/assets/leaf.png" alt="">
-            <img class="color-shades" src="/src/assets/artist-shape-05-300x198.png" alt="">
-            <img class="color-shades-2" src="/src/assets/artist-shape-color-paint-top-left-300x170.png" alt="">
-            <img class="dotted-img" src="/src/assets/maxcoach-shape-05.png" alt="">
-            <img class="boy-picture" src="src/assets/artist-hero-image-04-235x300.jpg" alt="">
+            <img class="artist-shape-right-1" src="/src/assets/heroSection/artist-shape-01-600x577.png" alt="detail">
+            <img class="leaf" src="/src/assets/heroSection/leaf.png" alt="">
+            <img class="color-shades" src="/src/assets/heroSection/artist-shape-05-300x198.png" alt="">
+            <img class="color-shades-2" src="/src/assets/heroSection/artist-shape-color-paint-top-left-300x170.png" alt="">
+            <img class="dotted-img" src="/src/assets/heroSection/maxcoach-shape-05.png" alt="">
+            <img class="boy-picture" src="src/assets/heroSection/artist-hero-image-04-235x300.jpg" alt="">
         </div>
     </section>
 </template>
