@@ -4,6 +4,47 @@ export default {
     name: 'HeaderCountdown',
     components: {
         CommonButton
+    },
+    data(){
+        return {
+            finalCountDown: '',
+            isTimerOff: false
+        }
+    },
+    methods:{
+        setCountDown(){
+            let countDownDate = new Date("Dec 7, 2022 18:00:00").getTime();
+
+            let now = new Date().getTime();
+                
+            let distance = countDownDate - now;
+                
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if(distance > 0){
+                this.finalCountDown = days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
+            } else {
+                this.isTimerOff = true;
+                this.finalCountDown = "TIMER TERMINATO !";
+            }
+
+            this.settingCounter;
+            return this.finalCountDown
+        }
+    },
+    computed: {
+        settingCounter(){
+            let x = setInterval(() => {
+                this.setCountDown();
+            }, 1000);
+
+            if(this.isTimerOff){
+                clearInterval(x);
+            }
+        }
     }
 }
 </script>
@@ -13,7 +54,9 @@ export default {
         <p class="m-0">Starts TOMORROW! Our biggest event of the year...</p>
         <div class="timer">
             <i class="clock-icon fa-regular fa-clock"></i>
-            <h5 class="m-0">00 : 00 : 00</h5>
+            <!-- <h5 class="m-0">00 : 00 : 00</h5> -->
+            <!-- <h5 class="m-0" id="demo"></h5> -->
+            <h5 class="m-0">{{this.setCountDown()}}</h5>
         </div>
         <CommonButton class="ticket-button" textButton = "Get ticket"/>
     </div>
