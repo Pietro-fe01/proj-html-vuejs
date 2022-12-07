@@ -68,7 +68,7 @@ export default {
             </div>
             
             <div class="image-details pb-5">
-                <img class="detail-1" src="src\assets\artist-shape-01-600x577.png" alt="">
+                <img class="detail-1" src="/src/assets/artistCoaching/artist-shape-01-600x577.png" alt="">
                 <img class="line" src="/src/assets/artistCoaching/maxcoach-shape-14.png" alt="">
                 <img class="waves" src="/src/assets/artistCoaching/maxcoach-shape-13-150x150.png" alt="">
                 <img class="big-wave" src="/src/assets/artistCoaching/artist-shape-01-300x288.png" alt="">
@@ -80,8 +80,8 @@ export default {
                 <img class="cover" src="/src/assets/artistCoaching/artist-video-poster.jpg" alt="">
 
                 <div class="image-details">
-                    <img class="video-detail" src="/src/assets/maxcoach-shape-05.png" alt="">
-                    <img class="video-detail-2" src="/src/assets/maxcoach-shape-05.png" alt="">
+                    <img class="video-detail" src="/src/assets/artistCoaching/maxcoach-shape-05.png" alt="">
+                    <img class="video-detail-2" src="/src/assets/artistCoaching/maxcoach-shape-05.png" alt="">
                     <div class="ms-circle"></div>
                     <a href="#" class="youtube-icon" >
                         <img src="/src/assets/artistCoaching/icon-youtube-play.png" alt="">

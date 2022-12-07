@@ -17,6 +17,20 @@ export default {
             <h2>Artist Coaching And Mentoring Might Be for You.</h2>
             <CommonButton class="get-started-button mt-4" textButton="Get started today"/>
         </div>
+        <div class="hero__shortcuts">
+            <a href="#">
+                <i class="fa-solid fa-ruler-combined"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-bullseye"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-book"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
 
         <div class="image-details">
             <!-- Details left -->
@@ -117,6 +131,23 @@ export default {
             }
             & .get-started-button{
                 padding: .625rem 1.875rem;
+            }
+        }
+        & .hero__shortcuts{
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 40px;
+            height: 160px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 8px;
+            box-shadow: 0 0 50px black;
+            & a{
+                color: black;
             }
         }
     }
