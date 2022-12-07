@@ -20,6 +20,7 @@ export default {
         border: none;
         font-weight: bold;
         font-size: .8125rem;
+        transition: background 0.4s;
 
         &:hover{
             background-color: #6ac5f1 !important;

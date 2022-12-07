@@ -164,11 +164,6 @@ export default {
                     transform: rotate(40deg);
                 }
                 &-3{
-                    // width: 45%;
-                    // bottom: -280px;
-                    // left: 840px;
-                    // rotate: 40deg;
-                    // transform: scaleX(-1);
                     right: -18px;
                     bottom: -125px;
                     width: 700px;
@@ -209,6 +204,10 @@ export default {
                     position: absolute;
                     & img{
                         max-width: 80px;
+                        &:hover{
+                            transform: scale(1.3);
+                            filter: drop-shadow(0 0 10px black);
+                        }
                     }
                 }
             }

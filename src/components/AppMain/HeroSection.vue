@@ -145,9 +145,12 @@ export default {
             align-items: center;
             justify-content: space-around;
             border-radius: 8px;
-            box-shadow: 0 0 50px black;
+            box-shadow: 0px 0px 20px -5px #000000;
             & a{
                 color: black;
+                &:hover{
+                    filter: drop-shadow(0 0 8px #ef6f31);
+                }
             }
         }
     }
