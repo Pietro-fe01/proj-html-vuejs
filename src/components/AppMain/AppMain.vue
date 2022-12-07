@@ -4,6 +4,7 @@ import ArtistCoaching from './ArtistCoaching.vue';
 import TestimonialSection from './TestimonialSection.vue';
 import LatestCourses from './LatestCourses.vue';
 import ArticlesTip from './Articles&Tip.vue';
+import UpcomingEvents from './UpcomingEvents.vue';
 
 export default {
     name: 'AppMain',
@@ -12,7 +13,8 @@ export default {
         ArtistCoaching,
         TestimonialSection,
         LatestCourses,
-        ArticlesTip
+        ArticlesTip,
+        UpcomingEvents
     }
 }
 </script>
@@ -24,6 +26,7 @@ export default {
         <TestimonialSection/>
         <LatestCourses/>
         <ArticlesTip/>
+        <UpcomingEvents/>
     </main>
 </template>
 
