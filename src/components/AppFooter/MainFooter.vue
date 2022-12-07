@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="main-footer">main footer</div>
+    <div class="main-footer"></div>
 </template>
 
 <style lang="scss" scoped>
