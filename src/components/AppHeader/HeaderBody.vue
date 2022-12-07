@@ -44,7 +44,9 @@ export default {
         <nav class="header-body__nav">
             <ul class="p-0 m-0">
                 <li v-for="link in menuLinks">
-                    <a :href="link.href">{{link.menuLabel}} <i class="fa-solid fa-chevron-down"></i></a>
+                    <a :href="link.href">{{link.menuLabel}}
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -78,22 +80,35 @@ export default {
             display: flex;
             & li{
                 margin: 0 .9375rem;
-                padding: 1.875rem 0;
+                padding: 28px 0;
                 & a{
                     text-decoration: none;
                     color: #333333;
                     display: flex;
                     align-items: center;
-                    & .fa-chevron-down{
-                        font-size: .5625rem;
-                        margin-left: 5px;
+                    &:hover{
+                        filter: drop-shadow(0 0 5px #ef6f31);
+                        & i{
+                            transform: rotate(180deg);
+                        }
                     }
+                }
+                & .fa-chevron-down{
+                    font-size: .5625rem;
+                    margin-left: 5px;
+                    transition: transform 0.5s;
                 }
             }
         }
         & .header-body__social i{
-            margin-left: .9375rem;
+            margin-left: 1.25rem;
             color: #696969;
+            font-size: 1.25rem;
+            transition: transform 0.5s;
+            &:hover{
+                transform: scale(1.5);
+                filter: drop-shadow(0 0 8px #ef6f31);
+            }
         }
     }
 </style>
