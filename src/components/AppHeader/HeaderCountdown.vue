@@ -13,7 +13,7 @@ export default {
     },
     methods:{
         setCountDown(){
-            let countDownDate = new Date("Dec 12, 2022 18:00:00").getTime();
+            let countDownDate = new Date("Dec 12, 2022 10:45:00").getTime();
 
             let now = new Date().getTime();
                 
