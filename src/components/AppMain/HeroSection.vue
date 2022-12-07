@@ -11,6 +11,7 @@ export default {
 
 <template>
     <section class="hero">
+        <a id="top" name="top"></a>
         <div class="hero__details">
             <h2 class="subtitle">Hello, Im Matin</h2>
             <h2>Artist Coaching And Mentoring Might Be for You.</h2>
@@ -118,5 +119,10 @@ export default {
                 padding: .625rem 1.875rem;
             }
         }
+    }
+    // Link che porta all'inizio della pagina
+    #top{
+        position: absolute;
+        top: -200px;
     }
 </style>
