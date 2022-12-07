@@ -108,6 +108,14 @@
         flex-wrap: wrap;
         & .course-card{
             width: calc(100% / 4);
+            cursor: pointer;
+            transition: transform 0.6s;
+            &:hover{
+                transform: scale(1.1);
+                & img{
+                    filter: drop-shadow(0 0 1px black);
+                }
+            }
             & .course-card__img{
                 & img{
                     width: 300px;
