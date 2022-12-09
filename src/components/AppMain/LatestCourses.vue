@@ -113,7 +113,13 @@
             &:hover{
                 transform: scale(1.1);
                 & img{
-                    filter: drop-shadow(0 0 1px black);
+                    // filter: drop-shadow(0 0 1px black);
+                }
+                & .course-card__info{
+                    border: 3px solid #ef6f31;
+                    margin-top: -30px;
+                    margin-bottom: 30px;
+                    position: relative;
                 }
             }
             & .course-card__img{
@@ -123,7 +129,11 @@
                 }
             }
             & .course-card__info{
-                padding: 20px 60px 20px 40px;
+                padding: 20px 25px;
+                margin: 0 35px 0 10px;
+                border: 3px solid transparent;
+                background-color: white;
+                transition: margin 0.3s;
                 & .price{
                     color: #ef6f31;
                     font-weight: bolder;
