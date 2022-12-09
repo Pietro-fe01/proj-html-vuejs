@@ -49,7 +49,7 @@
                     <div class="event-card__info">
                         <div class="date">{{event.date}}</div>
                         <h5 class="mt-2 mb-3">{{event.title}}</h5>
-                        <small><i class="fa-solid fa-location-dot"></i>{{ebent.place}}</small>
+                        <small><i class="fa-solid fa-location-dot"></i>{{event.place}}</small>
                     </div>
                 </div>
             </div>
