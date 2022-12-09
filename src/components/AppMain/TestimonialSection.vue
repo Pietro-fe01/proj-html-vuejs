@@ -33,16 +33,17 @@ export default {
                     testimonialRole: 'Ruolo quarta card'
                 },
             ],
-            currentIndex: 1
+            currentIndex: 1,
+            effect: false
         }
     },
     methods: {
         changeIndex(data){
-            return this.currentIndex = data
+            return this.currentIndex = data;
         },
         prevContent(){
             if(this.currentIndex === 0){
-                return this.testimonialList.length - 1
+                return this.testimonialList.length - 1;
             } else {
                 return this.currentIndex - 1;
             }
@@ -51,7 +52,24 @@ export default {
             if(this.currentIndex < this.testimonialList.length - 1){
                 return this.currentIndex + 1;
             } else {
-                return 0
+                return 0;
+            }
+        },
+        changeSlides(direction){
+            if(direction === 'prev'){
+                if(this.currentIndex === 0){
+                    this.currentIndex = this.testimonialList.length - 1;
+                } else {
+                    this.currentIndex--;
+                }
+            }
+            if(direction === 'next'){
+                this.effect = true;
+                if(this.currentIndex === this.testimonialList.length - 1){
+                    this.currentIndex = 0;
+                } else {
+                    this.currentIndex++;
+                }
             }
         }
     }
@@ -65,6 +83,9 @@ export default {
             <h2 class="mb-5">Why do people love me?</h2>
         </div>
         <div class="ms-carousel">
+            <button class="move-button prev" @click="changeSlides('prev')">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+            </button>
             <!-- Card Sinistra -->
             <div class="carousel-card">
                 <div class="carousel-card__description">
@@ -118,6 +139,9 @@ export default {
                 </div>
             </div>
             <!-- /Card destra -->
+            <button class="move-button next" @click="changeSlides('next')">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
         </div>
         <ol class="carousel-moving p-0 m-0">
             <li :class="{active : this.currentIndex === 1}" @click="changeIndex(1)"></li>
@@ -135,6 +159,7 @@ export default {
             display: flex;
             justify-content: space-between;
             padding: 0 50px;
+            position: relative;
             & .carousel-card{
                 width: 450px;
                 padding: 40px;
@@ -160,6 +185,26 @@ export default {
                         color: #aaaaaa;
                     }
                 }
+            }
+        }
+        & .move-button{
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            align-self: center;
+            font-size: 30px;
+            padding: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            opacity: 0.3;
+            &:hover{
+                opacity: 1;
+            }
+            &.prev{
+                left: 10px;
+            }
+            &.next{
+                right: 10px;
             }
         }
         & .carousel-moving{
