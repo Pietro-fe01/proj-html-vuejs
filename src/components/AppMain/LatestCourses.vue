@@ -140,6 +140,7 @@
                 }
                 & h5 {
                     font-weight: bolder;
+                    font-size: 19px;
                 }
                 & .bottom-infos{
                     display: flex;
