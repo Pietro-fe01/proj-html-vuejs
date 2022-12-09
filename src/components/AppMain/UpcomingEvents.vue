@@ -47,9 +47,9 @@
                         <img :src="`/src/assets/upcomingEvents/${event.img}`" alt="">
                     </div>
                     <div class="event-card__info">
-                        <div class="date">NOV 22, 2020</div>
-                        <h5 class="mt-2 mb-3">Storytelling Workshop</h5>
-                        <small><i class="fa-solid fa-location-dot"></i> Texas, US</small>
+                        <div class="date">{{event.date}}</div>
+                        <h5 class="mt-2 mb-3">{{event.title}}</h5>
+                        <small><i class="fa-solid fa-location-dot"></i>{{ebent.place}}</small>
                     </div>
                 </div>
             </div>
@@ -100,6 +100,7 @@
                 }
                 &:hover .event-card__info{
                     margin-left: 40px;
+                    opacity: 1;
                 }
                 &:nth-child(2)::before{
                     content: "";
@@ -128,23 +129,26 @@
                 &:nth-child(3), &:nth-child(4){
                     text-align: right;
                     &:hover .event-card__info{
-                        left: -160px;
+                        left: -200px;
                     }
                     .event-card__img img{
                         position: relative;
                         right: -380px;
-                        top: 0;
                     }
                     .event-card__info{
                         position: relative;
-                        top: 0;
-                        left: 90px;
-                        margin-left: 40px;
+                        left: 355px;
+                    }
+                }
+                &:nth-child(4){
+                    &:hover .event-card__info{
+                        left: -270px;
                     }
                 }
                 & .event-card__info{
                     margin-left: -230px;
                     transition: all 0.5s;
+                    opacity: 0;
                     z-index: -1;
                     & .date{
                         color: #8c8c8c;
