@@ -107,18 +107,13 @@
         display: flex;
         flex-wrap: wrap;
         & .course-card{
-            width: calc(100% / 4);
             cursor: pointer;
             transition: transform 0.6s;
             &:hover{
                 transform: scale(1.1);
-                & img{
-                    // filter: drop-shadow(0 0 1px black);
-                }
                 & .course-card__info{
                     border: 3px solid #ef6f31;
-                    margin-top: -30px;
-                    margin-bottom: 30px;
+                    // margin: -30px 0 30px 11px;
                     position: relative;
                 }
             }
@@ -130,7 +125,6 @@
             }
             & .course-card__info{
                 padding: 20px 25px;
-                margin: 0 35px 0 10px;
                 border: 3px solid transparent;
                 background-color: white;
                 transition: margin 0.3s;
@@ -154,6 +148,80 @@
             padding: 10px 30px;
             background-color: rgba(239, 111, 49, 0.2);
             color: #ef6f31;
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .latest-courses__cards{
+            justify-content: center;
+            & .course-card{
+                width: 100%;
+                &:hover .course-card__info{
+                    margin: -30px 0 30px 108px;
+                }
+                &__info{
+                    margin-left: 100px;
+                    width: 280px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .latest-courses__cards{
+            & .course-card{
+                width: calc(100% / 2);
+                &:hover .course-card__info{
+                    margin: -30px 0 30px 24px;
+                }
+                &__info{
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .latest-courses__cards{
+            & .course-card{
+                &:hover .course-card__info{
+                    margin: -30px 0 30px 84px;
+                }
+                &__info{
+                    margin-left: 60px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .latest-courses__cards{
+            & .course-card{
+                width: calc(100% / 3);
+                &:hover .course-card__info{
+                    margin: -30px 0 30px 35px;
+                }
+                &__info{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        .latest-courses__cards{
+            & .course-card{
+                width: calc(100% / 4);
+                &:hover .course-card__info{
+                    margin: -30px 0 30px 11px;
+                }
+                &__info{
+                    margin-left: 0px;
+                }
+            }
         }
     }
 </style>
