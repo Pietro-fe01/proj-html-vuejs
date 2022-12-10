@@ -90,7 +90,6 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 80px;
         & .header-body__logo{
             display: flex;
             align-items: flex-end;
@@ -177,6 +176,15 @@ export default {
                 transform: scale(1.5);
                 filter: drop-shadow(0 0 5px #ef6f31);
             }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .container.header-body{
+            min-height: 50px;
         }
     }
 </style>

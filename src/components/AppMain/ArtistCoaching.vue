@@ -47,7 +47,7 @@ export default {
             </div>
 
             <!-- Qui verranno stampate le card in modo dinamico -->
-            <div class="cards pb-5">
+            <div class="cards">
                 <HelpCard
                 v-for="help in helpList"
                 :info="help"/>
@@ -67,7 +67,7 @@ export default {
                 </div>
             </div>
             
-            <div class="image-details pb-5">
+            <div class="image-details">
                 <img class="detail-1" src="/src/assets/artistCoaching/artist-shape-01-600x577.png" alt="">
                 <img class="line" src="/src/assets/artistCoaching/maxcoach-shape-14.png" alt="">
                 <img class="waves" src="/src/assets/artistCoaching/maxcoach-shape-13-150x150.png" alt="">
@@ -109,9 +109,9 @@ export default {
             & .motivation{
                 display: flex;
                 align-items: baseline;
+                flex-wrap: wrap;
                 &__left{
                     text-align: center;
-                    width: 30%;
                     position: relative;
                     & img{
                         position: absolute;
@@ -121,9 +121,8 @@ export default {
                     }
                 }
                 &__right{
-                    width: 70%;
                     & p, button{
-                        margin-left: 150px;
+                        // margin-left: 150px;
                     }
                     .get-started-button{
                         padding: 10px 30px;
@@ -173,7 +172,8 @@ export default {
             & .youtube-video{
                 position: relative;
                 & .cover{
-                    width: 800px;
+                    width: 100%;
+                    max-width: 800px;
                     max-height: 400px;
                 }
                 & .video-detail{
@@ -208,6 +208,55 @@ export default {
                             filter: drop-shadow(0 0 10px black);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .cards{
+            flex-wrap: wrap;
+        }
+        .motivation{
+            &__left{
+                width: 100%;
+            }
+            &__right{
+                width: 100%;
+                text-align: center;
+                & p{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .motivation{
+            &__left{
+                width: 30%;
+            }
+            &__right{
+                width: 70%;
+                text-align: left;
+                & p, button{
+                    margin-top: 0;
+                    margin-left: 100px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .motivation{
+            &__left{
+            }
+            &__right{
+                & p, button{
+                    margin-left: 150px;
                 }
             }
         }
