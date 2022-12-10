@@ -26,11 +26,11 @@ export default {
                     testimonialRole: '/ It Specialist'
                 },
                 {
-                    testimonialTitle: 'Hight level and quality',
-                    testimonialDescription: 'descrizione quarta card',
+                    testimonialTitle: 'High level of efficiency and passionate mentors at reach',
+                    testimonialDescription: 'I am very strict person so I require everything to be organized and neat. Then, I\'ll be able to make things right and shine. MaxCoach guys just got me.',
                     testimonialImage: 'artist-testimonial-avatar-03.jpg',
-                    testimonialName: 'Nome quarta card',
-                    testimonialRole: 'Ruolo quarta card'
+                    testimonialName: 'Luke Wonder',
+                    testimonialRole: '/ Web Developer'
                 },
             ],
             currentIndex: 1,
@@ -99,7 +99,7 @@ export default {
                 <i class="fa-solid fa-circle-chevron-left"></i>
             </button>
             <!-- Card Sinistra -->
-            <div class="carousel-card">
+            <div class="carousel-card d-none d-lg-block">
                 <div class="carousel-card__description">
                     <h4 class="mb-4">{{this.testimonialList[this.prevContent()].testimonialTitle}}</h4>
                     <p class="mb-4">{{this.testimonialList[this.prevContent()].testimonialDescription}}</p>
@@ -135,7 +135,7 @@ export default {
             <!-- /Card centro -->
 
             <!-- Card destra -->
-            <div class="carousel-card">
+            <div class="carousel-card d-none d-lg-block">
                 <div class="carousel-card__description">
                     <h4 class="mb-4">{{this.testimonialList[this.nextContent()].testimonialTitle}}</h4>
                     <p class="mb-4">{{this.testimonialList[this.nextContent()].testimonialDescription}}</p>
@@ -173,7 +173,7 @@ export default {
             padding: 0 50px;
             position: relative;
             & .carousel-card{
-                width: 450px;
+                // width: 450px;
                 padding: 40px;
                 background-color: white;
                 font-size: 14px;
@@ -235,6 +235,14 @@ export default {
                     transform: scale(1.5);
                 }
             }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .carousel-card{
         }
     }
 </style>

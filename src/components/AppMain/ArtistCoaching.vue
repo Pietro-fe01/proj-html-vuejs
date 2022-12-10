@@ -121,9 +121,6 @@ export default {
                     }
                 }
                 &__right{
-                    & p, button{
-                        // margin-left: 150px;
-                    }
                     .get-started-button{
                         padding: 10px 30px;
                         background-color: rgba(239, 111, 49, 0.2);
