@@ -30,9 +30,9 @@ export default {
         &::before {
             background-color: #6ac5f1;
             border-radius: .3125rem;
+            bottom: 0; left: 0;
+            height: 100%; width: 0%;
             transition: 0.3s ease-out;
-            bottom: 0; left: 0; right: 0; 
-            height: 0%; width: 100%;
         }
         & span {         
             position: relative;
@@ -40,7 +40,7 @@ export default {
         &:hover{
             color: white !important;
             &::before{
-                height: 100%;
+                width: 100%;
             }
         }
     }
