@@ -31,4 +31,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    section{
+        overflow: hidden;
+    }
 </style>

@@ -28,7 +28,8 @@ export default {
                     menuLabel: 'Shop',
                     href: '#'
                 }
-            ]
+            ],
+            clicked: false
         }
     }
 }
@@ -40,8 +41,25 @@ export default {
             <a href="#">
                 <img src="/src/assets/appHeader/dark-logo.png" alt="">
             </a>
+            <!-- Menu che appare solo da mobile -->
+            <nav class="mobile-menu d-lg-none ms-4">
+                <i class="fa-solid fa-bars" @click="clicked = !clicked"></i>
+                <!-- Al click dell'icona menu si aprono i link -->
+                <div v-if="clicked" class="open-menu">
+                    <nav>
+                        <ul class="m-0 p-0">
+                            <li v-for="link in menuLinks">
+                                <a :href="link.href">{{link.menuLabel}}
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+            <!-- /Menu che appare solo da mobile -->
         </div>
-        <nav class="header-body__nav">
+        <nav class="header-body__nav d-none d-lg-block">
             <ul class="p-0 m-0">
                 <li v-for="link in menuLinks">
                     <a :href="link.href">{{link.menuLabel}}
@@ -72,8 +90,58 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        & .header-body__logo img{
-            width: 10rem;
+        min-height: 80px;
+        & .header-body__logo{
+            display: flex;
+            align-items: flex-end;
+            & img{
+                width: 10rem;
+            }
+            & .mobile-menu{
+                position: relative;
+                & i{
+                    cursor: pointer;
+                }
+                & .open-menu{
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    border-radius: 10px;
+                    background-color: white;
+                    border: 1px solid black;
+                    & nav ul{
+                        list-style: none;
+                        & li{
+                            padding: 5px 15px;
+                            &:first-child{
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                            &:last-child{
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                            }
+                            & a{
+                                text-decoration: none;
+                                color: #333333;
+                                display: flex;
+                                align-items: center;
+                                & i{
+                                    font-size: 10px;
+                                    margin-left: 5px;
+                                    transition: transform 0.5s;
+                                }
+                            }
+                            &:hover {
+                                filter: drop-shadow(0 0 3px #ef6f31);
+                                & i{
+                                    transform: rotate(-90deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         } 
         & .header-body__nav ul{
             list-style: none;

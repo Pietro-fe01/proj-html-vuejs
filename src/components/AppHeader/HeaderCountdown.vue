@@ -54,8 +54,6 @@ export default {
         <p class="m-0">Starts TOMORROW! Our biggest event of the year...</p>
         <div class="timer">
             <i class="clock-icon fa-regular fa-clock"></i>
-            <!-- <h5 class="m-0">00 : 00 : 00</h5> -->
-            <!-- <h5 class="m-0" id="demo"></h5> -->
             <h5 class="m-0">{{this.setCountDown()}}</h5>
         </div>
         <CommonButton class="ticket-button" textButton = "Get ticket"/>
@@ -86,6 +84,38 @@ export default {
         & .ticket-button{
             padding: 5px 25px;
             margin: 10px 0;
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .header-countdown{
+            padding: 0 15px;
+            p{
+                padding: 10px 0;
+                width: 150px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .header-countdown{
+            padding: 0;
+            p{
+                padding: 10px 0;
+                width: 250px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .header-countdown{
+            p{
+                padding: 0;
+                width: auto;
+            }
         }
     }
 </style>
