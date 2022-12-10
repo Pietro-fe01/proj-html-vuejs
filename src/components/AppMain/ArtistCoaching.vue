@@ -129,7 +129,6 @@ export default {
                         padding: 10px 30px;
                         background-color: rgba(239, 111, 49, 0.2);
                         color: #ef6f31;
-                        font-weight: bolder;
                     }
                 }
             }

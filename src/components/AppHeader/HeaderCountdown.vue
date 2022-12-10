@@ -84,7 +84,8 @@ export default {
             }
         }
         & .ticket-button{
-            margin: .625rem 0;
+            padding: 5px 25px;
+            margin: 10px 0;
         }
     }
 </style>

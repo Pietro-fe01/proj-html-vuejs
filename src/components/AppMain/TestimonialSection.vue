@@ -34,6 +34,7 @@ export default {
                 },
             ],
             currentIndex: 1,
+            autoplay: ''
         }
     },
     methods: {
@@ -73,9 +74,11 @@ export default {
         },
         autoplayCarousel(action){
             if(action === 'play'){
-                let autoplay = setInterval(() => {
+                this.autoplay = setInterval(() => {
                     this.changeSlides('next');
                 }, 3000)
+            } else if (action === 'stop'){
+                clearInterval(this.autoplay);
             }
         }
     },
@@ -91,7 +94,7 @@ export default {
             <h2 class="subtitle">Testimonials</h2>
             <h2 class="mb-5">Why do people love me?</h2>
         </div>
-        <div class="ms-carousel" @mouseenter="" @mouseleave="">
+        <div class="ms-carousel" @mouseenter="autoplayCarousel('stop')" @mouseleave="autoplayCarousel('play')">
             <button class="move-button prev" @click="changeSlides('prev')">
                 <i class="fa-solid fa-circle-chevron-left"></i>
             </button>
