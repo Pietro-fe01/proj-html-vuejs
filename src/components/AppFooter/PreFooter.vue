@@ -26,25 +26,19 @@
         padding: 50px 0;
         overflow: hidden;
         position: relative;
-        &::before{
+        &::after{
             content: "";
             display: inline-block;
             background-image: url('/src/assets/preFooter/artist-shape-color-paint-top-left-300x170.png');
             position: absolute;
-            top: 0;
-            left: 0;
             width: 300px;
-            height: 170px;
         }
-        &::after{
+        &::before{
             content: "";
             display: inline-block;
             background-image: url('/src/assets/preFooter/artist-shape-color-paint-bottom-right-300x153.png');
             position: absolute;
-            bottom: 0;
-            right: 0;
             width: 300px;
-            height: 153px;
         }
         & .container{
             display: flex;
@@ -84,6 +78,42 @@
                     top: 50%;
                     transform: translate(-50%, -50%);
                 }
+            }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .pre-footer{
+            &::before{
+                background-size: cover;
+                height: 200px;
+                right: -150px;
+                bottom: 0;
+            }
+            &::after{
+                background-size: cover;
+                height: 200px;
+                left: -150px;
+                top: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .pre-footer{
+            &::before{
+                bottom: 0;
+                right: 0;
+                height: 153px;
+            }
+            &::after{
+                background-size: cover;
+                top: 0;
+                left: 0;
+                height: 170px;
             }
         }
     }

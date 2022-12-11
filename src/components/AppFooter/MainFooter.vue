@@ -121,7 +121,7 @@
 <style lang="scss" scoped> 
     .main-footer{
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         color: #696969;
         & h5{
             font-weight: bolder;
@@ -133,7 +133,6 @@
         }
         & .agency__social a{
             color: #b4b4b4;
-            margin-right: 30px;
             & i{
                 font-size: 25px;
                 transition: transform 0.5s;
@@ -197,6 +196,44 @@
             border-radius: 50%;
             text-align: center;
             line-height: 50px;
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .main-footer{
+            justify-content: space-around;
+            & .agency{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+                &__social a{
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .main-footer{
+            justify-content: space-between;
+            & .agency{
+                width: auto;
+                text-align: left;
+                margin-bottom: 0;
+                &__social a{
+                    margin: 0;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .main-footer{
+            gap: 10px;
         }
     }
 </style>

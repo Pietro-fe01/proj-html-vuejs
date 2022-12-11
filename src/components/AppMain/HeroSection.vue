@@ -40,7 +40,7 @@ export default {
             <img class="artist-face" src="/src/assets/heroSection/artist-hero-image-03-204x300.png" alt="">
             <img class="artist-multi-color" src="/src/assets/heroSection/artist-hero-image-02-232x300.jpg" alt="">
             <img class="artist-monkey" src="/src/assets/heroSection/artist-hero-image-01.jpg" alt="">
-            
+
             <!-- Details right -->
             <img class="artist-shape-right-1" src="/src/assets/heroSection/artist-shape-01-600x577.png" alt="detail">
             <img class="leaf" src="/src/assets/heroSection/leaf.png" alt="">

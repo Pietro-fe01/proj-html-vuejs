@@ -86,7 +86,6 @@ export default {
         }
         & .articles-tip__container{
             display: flex;
-            justify-content: space-between;
             & .aside-card{
                 width: 280px;
                 height: 200px;
@@ -183,6 +182,32 @@ export default {
                     background-color: #ef6f31;
                 }
             }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .articles-tip__container{
+            flex-direction: column;
+            align-items: center;
+            & .aside-card{
+                &.left{
+                    margin-bottom: 370px;
+                }
+                &.right{
+                    margin-top: 20px;
+                    margin-bottom: 170px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .articles-tip__container{
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 </style>
