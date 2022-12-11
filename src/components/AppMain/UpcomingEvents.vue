@@ -91,7 +91,7 @@
                 color: #f4ebe2;
             }
             .event-card{
-                width: calc(100% / 2);
+                // width: calc(100% / 2);
                 display: flex;
                 align-items: center;
                 z-index: 10;
@@ -127,18 +127,18 @@
                     transform: rotate(10deg);
                 }
                 &:nth-child(3), &:nth-child(4){
-                    text-align: right;
-                    &:hover .event-card__info{
-                        left: -200px;
-                    }
-                    .event-card__img img{
-                        position: relative;
-                        right: -380px;
-                    }
-                    .event-card__info{
-                        position: relative;
-                        left: 355px;
-                    }
+                    // text-align: right;
+                    // &:hover .event-card__info{
+                    //     left: -200px;
+                    // }
+                    // .event-card__img img{
+                    //     position: relative;
+                    //     right: -380px;
+                    // }
+                    // .event-card__info{
+                    //     position: relative;
+                    //     left: 355px;
+                    // }
                 }
                 &:nth-child(4){
                     &:hover .event-card__info{
@@ -159,6 +159,41 @@
                     & i{
                         margin-right: 5px;
                     }
+                }
+            }
+        }
+    }
+
+    /*--------------------
+        RESPONSIVE
+    --------------------*/
+    @media screen and (min-width: 576px) {
+        .event-card{
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .event-card{
+            width: calc(100% / 2);
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        .event-card{
+            width: calc(100% / 2);
+            &:nth-child(3), &:nth-child(4){
+                text-align: right;
+                &:hover .event-card__info{
+                    left: -200px;
+                }
+                .event-card__img img{
+                    position: relative;
+                    right: -380px;
+                }
+                .event-card__info{
+                    position: relative;
+                    left: 355px;
                 }
             }
         }
